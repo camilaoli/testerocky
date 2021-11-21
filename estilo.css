@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap'); /*importação de fontes*/
+
+
+*{ /*aplicações para a pagina inteira*/
+ margin: 0;
+ padding: 0;
+ list-style:none;
+ text-decoration:none;
+ border:0;
+}
+html{
+    /*a cada 1rem 10px*/
+ font-size: 62.5%;
+}
+header{
+ width: 100%;
+ height: 100vh;
+ overflow: hidden;
+ position:relative;
+    
+    
+}.container{
+ width: 100%;
+ height: 100vh;
+ max-width: 81%; 
+ margin:auto;
+
+}
+
+.logo{
+    display:block;
+    position:fixed;
+    margin-left:7rem;
+    margin-top: 1.7rem;
+    
+    
+}
+.logo img{
+    width: 100%;
+    max-width:133px;
+    
+} 
+nav{
+ position:fixed;
+ width:100%;
+ display:flex;
+}
+.menu {
+ display: inline-flex;
+ margin-top: 2.5rem;
+ width: 100%;
+ margin-left:27% ;
+ text-transform:uppercase;
+ font-family:"Montserrat", sans-serif;
+ font-size:1.1rem;
+ color: #FFFFFF;
+ font-weight: 700;
+ letter-spacing: 0.5px;
+ 
+}
+.menu li a{
+
+ width: 100%;
+ min-width: 300px;
+ margin-left: 3rem;
+ color: #FFFFFF;
+
+    
+}
+ul li a:hover{
+ color:#1CD4E9;
+ border-bottom:2px solid #1CD4E9;
+}
+} 
+.img-wrapper{
+    
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ 
+}             
+.img-wrapper img{
+ width:100%;
+ height: 100vh;
+ object-fit: cover;
+
+}
+.banner{
+ width:100%;
+ text-align: center;
+ position:absolute;
+ top:29.5%;
+ 
+}
+.banner h1{
+ color:white;
+ font-size: 8.2rem;
+ font-family: "Montserrat", sans-serif;
+ font-weight: 800;
+ text-align: center;
+ margin-bottom: 4.2rem;
+ text-transform: uppercase;
+ line-height: 12rem;
+ 
+
+}
+.banner p{
+ color: white;
+ font-family:"Montserrat", sans-serif;
+ font-size: 1.15rem;
+ font-weight: 500;
+ letter-spacing: 0.5px;
+ line-height: 1.4rem;
+  
+    
+}
+.banner button{
+ margin-top: 6rem;
+ font-family: "Montserrat", sans-serif;
+ color: #FFFFFF;
+ font-size: 1.1rem;
+ background-color:#1CD4E9;
+ padding: 1.6rem;
+ text-transform: uppercase;
+ border-radius: 30px;
+ cursor: pointer;
+ font-weight: 700;
+
+}
+.banner button:hover{
+ opacity: 0.8;
+
+}
+/*medias para responsividade*/
+@media screen and (max-width:1222px){
+    *{
+        margin-bottom: auto;
+        line-height: auto;
+    
+    }
+    .menu{
+        margin-left:20%;
+    }
+    .menu li a{
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width:978px){
+    .menu{
+           font-size: 8px;
+    }
+}
+@media screen and (max-width:839px){
+    .banner h1{
+        font-size: 6rem;
+        margin-bottom: auto;
+        
+
+    }
+    .banner p{
+        font-size: 8px;
+    
+    }
+    .logo{
+        width: 100px;
+    }
+} 
+@media screen and (max-width:779px){
+    .menu{
+        display:none;
+    }
+    .logo{
+     left: 20%;
+
+    }
+    .menu-toggle{
+        width:40px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 20px;
+        position: absolute;
+    }
+    .one,
+    .two,
+    .three{
+        background-color: #FFFFFF;
+        height: 5px;
+        width: 100%;
+        margin: 6px;
+        transition-duration: 0.5s;
+
+    }
+ 
+    /*fullscreen menu hamburguer*/
+    .menu-section.on{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color:#444242;
+        z-index: 999;
+        display: block;
+        
+    }
+    .menu-section.on .menu{
+      display: block;
+      position: absolute;
+      top: 40px;
+     left: 20px;
+     width: 100vw;
+      height: 100vh;
+    }
+    .menu-section.on .menu-toggle{
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+    
+    .menu-section.on .menu-toggle .one{
+     transform: rotate(45deg) translate(7px,7px);
+    }
+    .menu-section.on .menu-toggle .two{
+     opacity: 0;
+    }
+    .menu-section.on .menu-toggle .three{
+     transform: rotate(-45deg) translate(8px,-9px);
+        
+        
+    }    
+    .menu-section.on .menu li a{
+        
+     font-size: 1.5rem;
+      line-height: 3rem;
+    } 
+
+    
+}
+@media screen and (max-width:612px){
+.banner h1{
+font-size:3rem ;
+line-height: 5rem;
+}
+.banner button{
+    font-size: 8px;
+}
+    
+    
+
+
+
+    
+
